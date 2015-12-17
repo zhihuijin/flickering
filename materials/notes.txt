@@ -1,0 +1,70 @@
+
+
+% The notation n! was introduced by Christian Kramp in 1808.[3]
+
+$\Gamma$ 函数的符号式勒让德引入的。
+Dirichlet 把  beta 函数给推广到了 n 维情形。 由此可以推出 $n$ 维球体积
+
+ As Bessel, Legendre and Gauss did, Kramp worked on the generalised factorial
+ function which applied to non-integers. His work on factorials is independent
+ of that of James Stirling and Vandermonde. He was the first to use the
+ notation n! (Elements d'arithmétique universelle, 1808). In fact, the more
+ general concept of factorial was found at the same time by Arbogast.
+
+% http://www.math.dartmouth.edu/~euler/correspondence/correspondents/Goldbach.html
+167 letters from the Euler-Goldbach Correspondence were published by P.H. Fuss
+in his Correspondance math閙atique et physique de quelques c閘鑒res g閛m鑤res
+du XVIII鑝e si鑓le . The letters below all came from Fuss' book. Unfortunately,
+Fuss often excised the personal part of the correspondence, and published only
+the scientific material. A complete set of the correspondence will have to wait
+until the publication of the appropriate volume of the Opera Omnia
+
+
+% http://www-history.mcs.st-andrews.ac.uk/Biographies/Euler.html
+In Institutiones calculi integralis (1768-70) Euler made a thorough
+investigation of integrals which can be expressed in terms of elementary
+functions. He also studied beta and gamma functions, which he had introduced
+first in 1729. Legendre called these 'Eulerian integrals of the first and
+second kind' respectively while they were given the names beta function and
+gamma function by Binet and Gauss respectively. As well as investigating double
+integrals, Euler considered ordinary and partial differential equations in this
+work.
+
+Legendre's major work on elliptic functions in Exercices du Calcul Intégral
+appeared in three volumes in 1811, 1817, and 1819. In the first volume Legendre
+introduced basic properties of elliptic integrals and also of beta and gamma
+functions. More results on beta and gamma functions appeared in the second
+volume together with applications of his results to mechanics, the rotation of
+the Earth, the attraction of ellipsoids and other problems. The third volume
+was largely devoted to tables of elliptic integrals.
+
+% http://www-history.mcs.st-andrews.ac.uk/Biographies/Stirling.html
+We mentioned above that he studied interpolation in the Methodus
+Differentialis. For example he defined the series Tn+1 = nTn with T1 = 1. He
+then considered T3/2, between the terms T1 and T2. In today's notation this
+would be Γ(½) and Stirling here is studying the Gamma function. He calculated
+T3/2 to ten decimal places. In fact
+
+T3/2 = Γ(½) = √
+
+The book contains other results on the Gamma function and the Hypergeometric
+function.
+
+De Moivre published Miscellanea Analytica in 1730. Stirling wrote to De Moivre
+pointing out some errors that he had made in a table of logarithms of
+factorials in the book and also telling De Moivre about Example 2 to
+Proposition 28 of Methodus Differentialis. De Moivre was able to extend his
+earlier results using Stirling's ideas and published a Supplement to
+Miscellanea Analytica a few months later. Clearly Stirling and De Moivre
+regularly corresponded around this time for in September 1730 Stirling relates
+the episode and new results of De Moivre in a letter to Gabriel Cramer.
+
+There is another area of Stirling's work that we shall examine, namely his work
+on gravitation and the figure of the Earth. However, before doing so we will
+look at a correspondence that Stirling had with Euler since this relates to the
+work we have just discussed on series. Euler wrote to Stirling on 8 June 1736
+from St Petersburg. We quote from his letter where he gives his opinion on
+Stirling's work (see [7] or [3]):-
+
+
+

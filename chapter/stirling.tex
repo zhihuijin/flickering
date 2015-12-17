@@ -1,0 +1,65 @@
+% Encoding:UTF-8
+% Copyright 2014 MathFire
+% Author: Rickjin (ZhihuiJin@gmail.com)
+%
+\chapter{Stirling 公式推导}
+\label{chap:stirling}
+
+\section{Poisson 分布的性质}
+
+如果 $X \sim Poisson(\lambda)$ 分布， 则
+$$ P(X = k) = \frac{\lambda^k}{k!}{e^{ - \lambda }} $$
+$Poisson$ 分布具有如下两个性质
+\begin{itemize}
+\item $Poisson(\lambda)$ 分布的均值和方差都是 $\lambda$
+\item $Poisson$ 分布具有可叠加性。如果$X,Y$为独立随机变量，且 $X\sim
+Poisson(\lambda_1), Y\sim Poisson(\lambda_2)$, 则 $X+Y\sim Poisson(\lambda_1+\lambda_2)$。
+\end{itemize}
+
+这两个性质不需要复杂的数学证明，只要知道二项分布 $B(n,p) \rightarrow
+Poission(\lambda)$ ($n\rightarrow \infty$ 且 $np=\lambda$)，就可以简单的推理出
+来。
+
+因为二项分布 $B(n,p)$ 的均值为 $np$, 方差是 $np(1-p)$, 当$n\rightarrow
+\infty$ 且 $np=\lambda$ 时，显然有 $np(1-p)\rightarrow np=\lambda$。
+
+第二个性质也可以基于二项分布推导出来。假设 
+$B(n,p_1) \rightarrow Poission(\lambda_1)$, 
+$B(n,p_2) \rightarrow Poission(\lambda_2)$。
+$X$ 可以用如下二项分布逼近：把 $[0,1]$ 区间分解为 $[0, 1/n], [1/n, 2/n],
+\cdots, [1-1/n, 1]$ 这$n$个区间，每个区间最多只能发生一次事件，于是每个区间就对
+应于一个成功概率为 $p_1$的贝努利实验； 同样的把$Y$ 在这$n$个区间做分解， 则每个
+区间对应到一个成功概率为 $p_2$的贝努利实验, 所以对应到 $X+Y$ 恰好是每个区间发生
+一次事件的概率是 $p_1 + p_2$, 所以 $X+Y$ 对应于 $Poission(n(p_1+p_2))=Poission(\lambda_1+\lambda_2)$。
+
+
+\section{Stirling 公式的统计推导}
+
+利用 $Poisson$ 分布的这两个特性，再加上中心极限定理，我们可以有一种简洁的方法推出 Stirling 公式。
+
+假设 $X_1, X_2,\ldots, X_n$ 为服从$Poisson(1)$ 的独立随机变量，令 $S_n=\sum_{i=1}^n
+X_i$, 则由 $Poisson$ 分布的可叠加性，$S_n \sim Poisson(n)$, 且
+\begin{equation}
+P\{ {S_n} = n\}  = \frac{{{e^{ - n}}{n^n}}}{{n!}}
+\end{equation}
+由于$S_n$ 的均值和方差都是 $n$, 由中心极限定理有 
+$$ \frac{S_n - n}{{\sqrt n }} \sim N(0,1) $$
+其密度函数为
+$$ \displaystyle f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}} $$
+所以，我们有如下推导
+\begin{eqnarray}
+\begin{array}{lll}
+ P({S_n} = n) & = & \displaystyle P\{ n - 1 < {S_n} \le n\}  \\ 
+              & = & \displaystyle P\{  - \frac{1}{{\sqrt n }} < \frac{{{S_n} - n}}{{\sqrt n }} \le 0\}  \\ 
+ & \approx & \displaystyle \int_{ - \frac{1}{{\sqrt n }}}^0 {\frac{1}{\sqrt{2\pi}}{e^{ - \frac{{{x^2}}}{2}}}dx}  \\ 
+ & \approx & f(0) [0 - ( - \frac{1}{{\sqrt n }})] \\
+ & = & \displaystyle {\frac{1}{\sqrt{2\pi}}}{e^{ - \frac{{{0^2}}}{2}}}[0 - ( - \frac{1}{{\sqrt n }})] \\
+
+ & = & \displaystyle {(2\pi n)^{ - \frac{1}{2}}} \\ 
+\end{array}
+\end{eqnarray}
+由以上两式得
+$$ \frac{{{e^{ - n}}{n^n}}}{{n!}} \approx {(2\pi n)^{ - \frac{1}{2}}} $$
+于是
+$$ n! \approx {n^{n + 1/2}}{e^{ - n}}\sqrt {2\pi } $$
+这就是 Stirling 公式。

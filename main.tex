@@ -1,0 +1,50 @@
+% Encoding:UTF-8
+% Copyright 2014 MathFire
+% Author: Rickjin (ZhihuiJin@gmail.com)
+%
+\documentclass[12pt]{ctexrep}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{diagbox}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[colorlinks,bookmarks=false,CJKbookmarks=false,unicode=true,
+            linkcolor=blue,anchorcolor=blue,citecolor=green]{hyperref}
+
+%% graphics settings
+\graphicspath{{img/}}
+
+%% math settings
+\newtheoremstyle{mystyle}{3pt}{3pt}{\songti}{0cm}{\heiti}{}{1em}{}
+\theoremstyle{mystyle}
+
+\newtheorem{definition}{\hspace{2em}定义}[section]
+\newtheorem{theorem}[definition]{\hspace{2em}定理}
+\newtheorem{axiom}[definition]{\hspace{2em}公理}
+\newtheorem{lemma}[definition]{\hspace{2em}引理}
+\newtheorem{proposition}[definition]{\hspace{2em}命题}
+\newtheorem{corollary}[definition]{\hspace{2em}推论}
+\newtheorem{remark}{\hspace{2em}注}[section]
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+
+\begin{document}
+
+\include{chapter/head}
+\include{chapter/normal-distribution}
+\include{chapter/gamma-function}
+\include{chapter/beta-dirichlet}
+\include{chapter/mcmc}
+\include{chapter/lda-intro}
+\include{chapter/stirling}
+\include{chapter/language-entropy}
+\include{chapter/hypothesis-test}
+\include{chapter/collocation}
+\include{chapter/statistics-in-war}
+
+\end{document}
