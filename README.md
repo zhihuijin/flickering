@@ -1,18 +1,19 @@
 # 火光摇曳
 
-### 下载当前的版本
+### 下载编译好的版本
 
-http://pan.baidu.com/s/1pKqfK0b
+查看 release 目录获取编译好的版本
 
-### 编译这本书
+### 自己编译这本书？
 Linux & Mac 下
 
 $> xelatex main.tex
 
 Windows 下使用 CTex 编译，有可能要修改一下字体配置文件
 
-### XeTex & CTex 的字体配置
-配置过程参考 http://www.douban.com/note/322135009/
+### 编译出错 ？
+
+编译前预计需要配hi一下字体， XeTex & CTex 的字体配置，配置过程参考 http://www.douban.com/note/322135009/
 
 XeLatex 字体配置文件： /usr/local/texlive/2013/texmf-dist/tex/latex/ctex/fontset/ctex-xecjk-winfonts.def
     
