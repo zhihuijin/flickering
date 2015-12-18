@@ -1,5 +1,9 @@
 # 火光摇曳
 
+### 下载当前的版本
+
+http://pan.baidu.com/s/1pKqfK0b
+
 ### 编译这本书
 Linux & Mac 下
 
@@ -34,8 +38,4 @@ XeLatex 字体配置文件： /usr/local/texlive/2013/texmf-dist/tex/latex/ctex/
 
     \endinput
               
-
-### 下载当前的版本
-
-http://pan.baidu.com/s/1pKqfK0b
 
