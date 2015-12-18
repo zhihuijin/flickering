@@ -2,7 +2,8 @@
 
 ### 下载编译好的版本
 
-查看 release 目录获取编译好的版本
+1. 查看 release 目录获取编译好的版本
+2. 这里下载：http://pan.baidu.com/s/1V77Vg
 
 ### 自己编译这本书？
 Linux & Mac 下
