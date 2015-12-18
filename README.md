@@ -13,7 +13,7 @@ Windows 下使用 CTex 编译，有可能要修改一下字体配置文件
 
 ### 编译出错 ？
 
-编译前预计需要配hi一下字体， XeTex & CTex 的字体配置，配置过程参考 http://www.douban.com/note/322135009/
+编译前预计需要配置一下字体， XeTex & CTex 的字体配置，配置过程参考 http://www.douban.com/note/322135009/
 
 XeLatex 字体配置文件： /usr/local/texlive/2013/texmf-dist/tex/latex/ctex/fontset/ctex-xecjk-winfonts.def
     
