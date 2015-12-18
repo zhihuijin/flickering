@@ -36,3 +36,6 @@ XeLatex 字体配置文件： /usr/local/texlive/2013/texmf-dist/tex/latex/ctex/
               
 
 ### 下载当前的版本
+
+http://pan.baidu.com/s/1pKqfK0b
+
