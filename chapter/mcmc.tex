@@ -290,10 +290,13 @@ $$ \alpha(i,j)= p(j) q(j,i)， \quad \alpha(j,i) = p(i) q(i,j)$$
 \begin{equation}
 \label{detailed-balance}
 p(i) \underbrace{q(i,j)\alpha(i,j)}_{Q'(i,j)}
-= p(j) \underbrace{q(j,i)\alpha(j,i)}_{Q'(j,i)}
+= p(j) \underbrace{q(j,i)\alpha(j,i)}_{Q'(j,i)} .
 \end{equation}
-于是我们把原来具有转移矩阵$Q$的一个很普通的马氏链，改造为了具有转移矩阵$Q'$的马氏链，而
-$Q'$恰好满足细致平稳条件，由此马氏链$Q'$的平稳分布就是$p(x)$！
+为了使得转移矩阵$Q'$满足概率归一化条件。可以定义
+$$ Q'(i,i) = 1- \sum_{j:j \neq i}  Q'(j, i) $$
+于是我们把原来具有转移矩阵$Q$的一个很普通的
+马氏链，改造为了具有转移矩阵$Q'$的马氏链，而 $Q'$恰好满足细致平稳条件，由此马氏
+链$Q'$的平稳分布就是$p(x)$！
 
 在改造 $Q$ 的过程中引入的 $\alpha(i,j)$称为接受率，物理意义可以理解为在原来的马氏链上，
 从状态 $i$ 以$q(i,j)$ 的概率转跳转到状态$j$ 的时候，我们以$\alpha(i,j)$的概率接受这个转移，于
