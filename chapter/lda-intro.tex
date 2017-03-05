@@ -502,14 +502,14 @@ p(z_i = k, w_i = t |\vec{\mathbf{z}}_{\neg i}, \vec{\mathbf{w}}_{\neg i}) \\
 就是对应的两个 Dirichlet 后验分布在贝叶斯框架下的参数估计。
 借助于前面介绍的Dirichlet 参数估计的公式 \eqref{dirichlet-parameter-estimation}，我们有
 \begin{align*}
-\hat{\theta}_{mk} &= \frac{n_{m,\neg i}^{(k)} + \alpha_k}{\sum_{k=1}^K (n_{m,\neg i}^{(t)} + \alpha_k)} \\
+\hat{\theta}_{mk} &= \frac{n_{m,\neg i}^{(k)} + \alpha_k}{\sum_{k=1}^K (n_{m,\neg i}^{(k)} + \alpha_k)} \\
 \hat{\varphi}_{kt} &= \frac{n_{k,\neg i}^{(t)} + \beta_t}{\sum_{t=1}^V (n_{k,\neg i}^{(t)} + \beta_t)}
 \end{align*}
 于是，我们最终得到了 LDA 模型的 Gibbs Sampling 公式
 \begin{equation}
 \label{gibbs-sampling}
 p(z_i = k|\vec{\mathbf{z}}_{\neg i}, \vec{\mathbf{w}})  \propto
-\frac{n_{m,\neg i}^{(k)} + \alpha_k}{\sum_{k=1}^K (n_{m,\neg i}^{(t)} + \alpha_k)}
+\frac{n_{m,\neg i}^{(k)} + \alpha_k}{\sum_{k=1}^K (n_{m,\neg i}^{(k)} + \alpha_k)}
 \cdot \frac{n_{k,\neg i}^{(t)} + \beta_t}{\sum_{t=1}^V (n_{k,\neg i}^{(t)} + \beta_t)}
 \end{equation}
 
