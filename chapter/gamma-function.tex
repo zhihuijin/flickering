@@ -81,7 +81,7 @@ $$ \lim_{n\rightarrow\infty} \frac{(2^n \cdot n!)^4}{[(2n)!]^2(2n+1)} = \frac{\p
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.25\textwidth]{gamma/john-wallis.jpg}
+\includegraphics[width=0.3\textwidth]{gamma/john-wallis.jpg}
 \caption{沃利斯}
 \end{figure}
 
@@ -179,9 +179,10 @@ $A_{\frac{1}{2},\frac{1}{2}}$ 。
 \end{enumerate}
 
 沃利斯对 $p,q = 1,2,\ldots,10$ 做了计算， 发现$A_{p,q}$ 这个表格不太好处理，改
-为倒数之后容易分析。取 $B_{p,q} = \frac{1}{A_{p,q}}$, 列出表格仔细一分析， 就会
-发现，以左上角$B_{0,0}$ 为顶点，平行于对角线上的数居然恰好构成了帕斯卡三
-角形！ 这个三角形中的组合数已经是数学家熟悉知的， 于是沃利斯很容易地得到
+为倒数之后容易分析。取 $B_{p,q} = \frac{1}{A_{p,q}}$, 列出表格(见表 \ref{B-table})
+仔细一分析， 就会发现，面对着左上角$B_{0,0}$ 的一系列平行对角线上的数居然恰好构
+成了帕斯卡三角形！ 这个三角形中的组合数已经是数学家熟悉知的， 于是沃利斯很容易
+地得到
 \begin{equation}
 \label{wallis-Bpq}
 B_{p,q} = \frac{(p+q)!} {p! q!} = \frac{1}{p!} (q+1) (q+2) \cdots (q+p) \quad q=0,1,2 \cdots .
@@ -198,22 +199,24 @@ B_{p,q} = \frac{p+q}{q} B_{p,q-1} .
 \item 由于原始表格是对称的， 推广到分数之后的表格依然应该保持对称性。
 \end{enumerate}
 
+
 \begin{table}[htb]
 \centering
-\caption{$B_{pq}$ 数值表}
-\begin{tabular*}{0.8\textwidth}{@{\extracolsep{\fill}}|c|ccccccc|}
-\hline
-\diagbox{p}{q} & 0 & 1 & 2 & 3 & 4 & \ldots & 10 \\
-\hline
-0 & 1 & 1 & 1 & 1 & 1 & \ldots & 1  \\
-1 & 1 & 2 & 3 & 4 & 5 & \ldots & 11  \\
-2 & 1 & 3 & 6 & 10 & 15 & \ldots & 66  \\
-3 & 1 & 4 & 10 & 20 & 35 & \ldots & 286  \\
-4 & 1 & 5 & 15 & 35 & 70 & \ldots & 1001  \\
-\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots  \\
-10 & 1 & 11 & 66 & 286 & 1001 & \ldots & 184756  \\
-\hline
-\end{tabular*}
+\caption{\label{B-table} $B_{pq}$ 数值表}
+\includegraphics[width=0.8\textwidth]{gamma/B-table.png}
+% \begin{tabular*}{0.8\textwidth}{@{\extracolsep{\fill}}|c|ccccccc|}
+% \hline
+% \diagbox{p}{q} & 0 & 1 & 2 & 3 & 4 & \ldots & 10 \\
+% \hline
+% 0 & 1 & 1 & 1 & 1 & 1 & \ldots & 1  \\
+% 1 & 1 & 2 & 3 & 4 & 5 & \ldots & 11  \\
+% 2 & 1 & 3 & 6 & 10 & 15 & \ldots & 66  \\
+% 3 & 1 & 4 & 10 & 20 & 35 & \ldots & 286  \\
+% 4 & 1 & 5 & 15 & 35 & 70 & \ldots & 1001  \\
+% \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots  \\
+% 10 & 1 & 11 & 66 & 286 & 1001 & \ldots & 184756  \\
+% \hline
+% \end{tabular*}
 \end{table}
 
 基于对称性假设和计算式\eqref{wallis-Bpq}, 我们可以得到，
@@ -273,7 +276,7 @@ de Moivre, 1667-1754)和斯特林(James Stirling, 1692-1770)。
 \begin{figure}[htbp]
 \centering
 \vspace{1cm}
-\includegraphics[width=0.2\textwidth]{gamma/abraham-de-moivre.jpg}
+\includegraphics[width=0.3\textwidth]{gamma/abraham-de-moivre.jpg}
 \caption{棣莫弗}
 \end{figure}
 
@@ -361,6 +364,22 @@ $f(\frac{1}{2})$。直观地说就是我们找到了一条通过所有整数点 
 具有简洁的解析表达式的平滑曲线$y=x(x+1)/2$ ，从而可以把定义在整数集上的通项公式
 延拓到实数集合。
 
+自然数的加法序列可以很容易地延拓到实数集合上做计算，
+很自然地我们就会问下一个问题：自然数的乘法序列 $1,1\cdot2, 1\cdot2\cdot3,
+1\cdot2\cdot3\cdot4, 1\cdot2\cdot3\cdot4\cdot5,  \cdots$ 能否做类似的推广？
+我们可以计算 $2!,3!$, {\bf 如何计算 $(\frac{1}{2})!$？} 读者不妨自己尝试一下，
+很快就会发现，乘法可不像加法那么容易处理，要给出分数的阶乘定义着实有点困难。 如
+果把$(n,n!)$ 最初的一些点描在坐标轴上(见图\ref{factorial-curve})，可以看到，画
+出一条通过这些点的平滑曲线很容易，但是如何找到一个简洁的解析表达式呢？
+
+斯特林开始研究阶乘序列 $1!, 2!,3!,4!,5!  \cdots$ 延拓到实数上的计算问题
+。 对于一个整数序列，如果无法给出一个显示解析表达式把通项公式延拓到实数集合上，
+一种退而求其次的方法就是利用多项式插值做近似计算。 我们知道平面上 $n+1$ 个点可
+以确定一条 $n$ 次多项式曲线。为了计算实数点对应的值，可以利用该实数点周围的
+$n+1$个整数点去拟合一条 $n$ 次多项式曲线，从而近似地估算实数点的值。斯特林在
+1730 年出版的一本书中描述了基于多阶差分处理序列插值的方法，这些方法本质上类似于
+利用多项式曲线做插值。
+
 \begin{table}[htb]
 \centering
 \begin{tabular*}{0.9\textwidth}{@{\extracolsep{\fill}}|cccccccccc|}
@@ -375,24 +394,8 @@ $n!$ & 1 & 2 & 6 & 24 & 120 & 720 & 5040 & 40320 & $\cdots$ \\
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.6\textwidth]{gamma/factorial-curve.png}
-\caption{通过$(n,n!)$的曲线}
+\caption{\label{factorial-curve}通过$(n,n!)$的曲线}
 \end{figure}
-
-自然数的加法序列可以很容易地延拓到实数集合上做计算，
-很自然地我们就会问下一个问题：自然数的乘法序列 $1,1\cdot2, 1\cdot2\cdot3,
-1\cdot2\cdot3\cdot4, 1\cdot2\cdot3\cdot4\cdot5,  \cdots$ 能否做类似的推广？
-我们可以计算 $2!,3!$, {\bf 如何计算 $(\frac{1}{2})!$？} 读者不妨自己尝试一下，
-很快就会发现，乘法可不像加法那么容易处理，要给出分数的阶乘定义着实有点困难。 如
-果把$(n,n!)$ 最初的一些点描在坐标轴上，可以看到，画出一条通过这些点的平滑曲线很
-容易，但是如何找到一个简洁的解析表达式呢？
-
-斯特林开始研究阶乘序列 $1!, 2!,3!,4!,5!  \cdots$ 延拓到实数上的计算问题
-。 对于一个整数序列，如果无法给出一个显示解析表达式把通项公式延拓到实数集合上，
-一种退而求其次的方法就是利用多项式插值做近似计算。 我们知道平面上 $n+1$ 个点可
-以确定一条 $n$ 次多项式曲线。为了计算实数点对应的值，可以利用该实数点周围的
-$n+1$个整数点去拟合一条 $n$ 次多项式曲线，从而近似地估算实数点的值。斯特林在
-1730 年出版的一本书中描述了基于多阶差分处理序列插值的方法，这些方法本质上类似于
-利用多项式曲线做插值。
 
 
 但是$n!$这个数列的增长速度过快，如果没有计算工具的协助，要做这个序列的插值计算也
@@ -484,9 +487,9 @@ $$ \left(n+\frac{1}{2}\right)!
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.25\textwidth]{gamma/goldbach2.jpg}
+\includegraphics[width=0.3\textwidth]{gamma/goldbach2.jpg}
 \quad\quad
-\includegraphics[width=0.25\textwidth]{gamma/Daniel_Bernoulli_by_Grooth.jpg}
+\includegraphics[width=0.3\textwidth]{gamma/Daniel_Bernoulli_by_Grooth.jpg}
 \caption{哥德巴赫和丹尼尔·贝努利}
 \end{figure}
 
@@ -640,7 +643,7 @@ $$ \Gamma(x+1) = \int_0^1 (-\log t)^{x}dt =  \int_0^{\infty} t^{x}e^{-t}dt .$$
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.6\textwidth]{lda/gamma-func.png}
+\includegraphics[width=0.7\textwidth]{lda/gamma-func.png}
 \caption{$\Gamma(x)$ 在正半轴的图像}
 \end{figure}
 
@@ -697,7 +700,7 @@ $$ \Pi(x)=\int_{0}^\infty t^x e^{-t}\,dt ,$$
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.25\textwidth]{gamma/Legendre.jpg}
+\includegraphics[width=0.3\textwidth]{gamma/Legendre.jpg}
 \caption{勒让德肖像水彩画}
 \end{figure}
 
@@ -784,7 +787,7 @@ $$ \Gamma(x) \approx \sqrt{2\pi}e^{-x}x^{x-\frac{1}{2}} .$$
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.5\textwidth]{lda/gamma-complex.png}
+\includegraphics[width=0.6\textwidth]{lda/gamma-complex.png}
 \caption{复平面上的伽玛函数}
 \end{figure}
 
@@ -793,14 +796,14 @@ $$ \Gamma(x) \approx \sqrt{2\pi}e^{-x}x^{x-\frac{1}{2}} .$$
 知道二维球(圆)的面积为 $\pi r^2$，三维球的体积为 $\frac{4}{3} \pi r^3$，那半径
 为$r$ 的$n$维球的体积是多少呢？ 这个体积是如下多重积分
 $$ \displaystyle V_n(r) = \idotsint\limits_{ \tiny \{(x_1, \cdots, x_n) | \sum x_i^2 < r^2 \} }  1 \quad dx_1dx_2 \cdots dx_n  .$$
-这个计算需要一点想象力，实际上可以很容易的证明 \footnote{在 Wikipedia 上可以找到一个很有启发性的证明方法。}
+这个计算需要一点想象力，实际上可以很容易地证明 \footnote{在 Wikipedia 上可以找到一个很有启发性的证明方法。}
 $$ V_n(r) = \frac{\pi^{\frac{n}{2}} r^n}{\Gamma(\frac{n}{2} + 1)} .$$ 
 瞧，$n$维球体积公式完全依赖于伽玛函数，我们日常熟悉的圆的面积、球的体积公
 式不过是它的特例而已。 
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.4\textwidth]{gamma/n-dim-ball.jpg}
+\includegraphics[width=0.5\textwidth]{gamma/n-dim-ball.jpg}
 \caption{$n$ 维球的体积}
 \end{figure}
 
@@ -833,7 +836,7 @@ $$ x^{(\frac{1}{2})} = \frac{\Gamma{(1+1)}}{\Gamma{(1-1/2+1)}} x^{1-1/2}
 导数的定义从整数阶延拓到分数阶。
 
 那一般的可导函数$f(x)$ 可以定义分数阶导数吗？ 一般的函数 $f(x)$ 可以通过泰
-勒级数展开表达为幂级数，所以欧拉很容易想到借用 $x^n$ 的分数阶导数，可以尝试定
+勒级数展开表达为幂级数，所以欧拉很容易想到借用 $x^n$ 的分数阶导数来定
 义出任意可导函数的分数阶导数。这种简单的方式确实能够处理不少函数，遗憾的是在某
 些函数上由于不能满足收敛性要求,因而定义是失效的。虽然欧拉没能够在函数的分数阶导
 数的问题上进一步深入，但是他的这个思路给后来的数学家打开了一道门，这门通向数学
@@ -847,7 +850,7 @@ $$ x^{(\frac{1}{2})} = \frac{\Gamma{(1+1)}}{\Gamma{(1-1/2+1)}} x^{1-1/2}
 吗？} 答案却是否定的，丹尼尔·贝努利最早的无穷乘积推广就已经说明了存在多种推广延拓的
 方式。譬如$\Gamma(x) \cos (2x\pi)$ 这个函数显然也满足把阶乘延拓到实数集。 
 那伽玛函数凭什么鹤立鸡群、集万千数学家的宠爱于一身呢？从伽玛函数的图像我们可
-以看到它是一个凸函数，凸函数都是数学家们宠爱的对象，一个函数是凸函数往往意味着
+以看到它是一个凸函数。凸函数是数学家们宠爱的对象，一个函数是凸函数往往意味着
 它有众多良好的性质。那伽玛函数是唯一的满足凸性的阶乘函数吗？答案还是否定的。但
 是数学家发现不仅 $\Gamma(x)$ 是一个凸函数， $\log\Gamma(x)$ 也是一个凸函数，这
 可是难得一见的优良品质。实际上可以证明如下定理:
@@ -861,9 +864,9 @@ $$ x^{(\frac{1}{2})} = \frac{\Gamma{(1+1)}}{\Gamma{(1-1/2+1)}} x^{1-1/2}
 \end{theorem}
 一言以蔽之：伽玛函数拥有优良血统，它是唯一的在取对数后还满足凸性的阶乘推广函数。
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.45\textwidth]{lda/digamma-func.png}
+\includegraphics[width=0.6\textwidth]{lda/digamma-func.png}
 \caption{$\log \Gamma(x)$ 是一个凸函数}
 \end{figure}
 
@@ -877,19 +880,19 @@ $$ \Gamma(x) \Gamma(1-x) = \frac{\pi}{\sin (\pi x)} .$$
 $$ {\Gamma(x)} = \frac{1}{xe^{\gamma x}} \prod_{k=1}^\infty
 \frac{e^{\frac{x}{k}}} {1+\frac{x}{k}} .$$
 此处 $\gamma \approx 0.5772156649\cdots$ 为欧拉常数。这个结果在复平面上也成立。
-由于伽玛函数的这个分解形式的启发，魏尔斯特拉斯发现复平面上任意整函数$f(z)$ 都可
+由伽玛函数的这个分解形式的启发，魏尔斯特拉斯发现复平面上任意整函数$f(z)$ 都可
 以分解为无穷乘积形式。之前在介绍沃利斯公式的时候，提到了欧拉发现的
 $\sin x$ 的无穷乘积展开式 \eqref{euler-sinx} ，我们也说过这个展开式的证明并不算
-简单。实际上，基于魏尔斯特拉斯这个伽玛函数的无穷乘积形式和欧拉的反射公式，分
-别整理简化一下 $\Gamma(1+x)\Gamma(1-x)$， 就可以得到对 \eqref{euler-sinx} 式的
+简单。实际上，基于魏尔斯特拉斯这个伽玛函数的无穷乘积形式和欧拉的反射公式，
+整理简化一下 $\Gamma(1+x)\Gamma(1-x)$， 就可以得到对 \eqref{euler-sinx} 式的
 一个简洁的证明。
 
-数论号称数学上的皇冠，伽玛函数看起来和数论八竿子打不着，却在这顶皇冠之中熠熠生
+数论号称数学上的皇冠。伽玛函数看起来和数论八竿子打不着，却在这顶皇冠之中熠熠生
 辉。 伽玛函数和欧拉常数 $\gamma$ 有密切关系，可以发现
 $$ \gamma = -\frac{d\Gamma(x)}{dx}|_{x=1} =
 \lim_{n\rightarrow \infty}(1+\frac{1}{2} + \frac{1}{3}+\cdots+\frac{1}{n} - \log n) . $$
 欧拉常数$\gamma$ 是一个神奇的常数，它到底是一个有理数还是一个
-无理数？数学家至今都耿耿于怀。进一步还可以发现伽玛函数和黎曼$\zeta(s)$函数
+无理数？数学家至今都耿耿于怀。进一步还可以发现伽玛函数和黎曼Zeta函数
 $$ \zeta(s) = 1+\frac{1}{2^s} + \frac{1}{3^s} + \cdots $$
 有着密切联系。黎曼发现了如下式子
 $$ \zeta(x) \Gamma(x) = \int_0^\infty \frac{u^{x-1}}{e^u - 1} du ,$$
@@ -932,7 +935,7 @@ $$\Psi_1(1) = \zeta(2) = 1 + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{4^2} +  \c
 \end{equation}
 取上式积分号中的函数作为概率密度，就得到一个形式最简单的伽玛分布密度函数
 $$Gamma(x|\alpha) = \frac{x^{\alpha-1}e^{-x}}{\Gamma(\alpha)} .$$
-如果在\eqref{gamma-distribution} 式中做一个变换 $x=\beta t$, 就得到伽玛分布密度
+如果在\eqref{gamma-distribution} 式中做变换 $x=\beta t$, 就得到伽玛分布密度
 函数更一般的形式
 $$Gamma(t|\alpha, \beta) = \frac{\beta^\alpha t^{\alpha-1}e^{-\beta t}}{\Gamma(\alpha)} .$$
 
@@ -947,18 +950,18 @@ $$Gamma(t|\alpha, \beta) = \frac{\beta^\alpha t^{\alpha-1}e^{-\beta t}}{\Gamma(\
 伽玛分布的特例，密度函数分别对应于 $Gamma(1, \lambda)$ 和
 $Gamma(\frac{\nu}{2}, \frac{1}{2})$ 。 观察图 \ref{gamma-distr-graph} 可以发现
 ，伽玛分布在不同的参数配置下可以呈现众多的形状，因此具有强大的拟合数据的能力。
-伽玛分布同时是一个很强大的先验分布，在贝叶斯统计分析中被广泛的用作其它分布的先
+伽玛分布同时是一个很强大的先验分布，在贝叶斯统计分析中被广泛地用作其它分布的先
 验。如果把统计分布中的共轭关系类比为人类生活中的情侣关系的话，那指数分布、泊松
 分布、正态分布、对数正态分布都可以看作是伽玛分布的情人。
 
 接下来的内容中我们主要关注$\beta = 1$的简单形式的伽玛分布。伽玛分布首先和泊松分
-布发生密切的联系。容易发现伽玛分布的概率密度和泊松分布在数学形式上具有高度
-的一致性。参数为$\lambda$的泊松分布，概率分布写为
+布发生密切的联系。容易发现伽玛分布和泊松分布在数学形式上具有高度的一致性。参数
+为$\lambda$的泊松分布，概率分布写为
 $$Poisson(X=k|\lambda) = \frac{\lambda^k e^{-\lambda}}{k!} , $$
 在伽玛分布的密度函数中取 $\alpha = k+1$ 得到
 $$ Gamma(\lambda|\alpha=k+1) 
 = \frac{\lambda^ke^{-\lambda}}{\Gamma(k+1)}= \frac{\lambda^k e^{-\lambda}}{k!} . $$
-一模一样！这两个分布的数学形式具有高度的一致性。只是泊松分布是离散的，伽玛分布
+这二者一模一样！这两个分布的数学形式具有高度的一致性。只是泊松分布是离散的，伽玛分布
 是连续的。这种数学上的一致性难道是偶然的吗？ 事实上，从泊松分布出发，利用一
 个简单的概率物理模型可以对伽玛分布的密度函数给出清晰的物理解释。
 
@@ -1076,7 +1079,7 @@ $$ e^{-\lambda} = \lim_{n\rightarrow \infty} (1- \frac{\lambda}{n}) ^n ,$$
 \begin{figure}[t]
 \centering
 \includegraphics[height=0.5\textwidth, width=0.8\textwidth]{gamma/iceberg.png}
-\caption{冰山}
+\caption{伽玛函数冰山}
 \end{figure}
 
 许多人认为数学的概念是静态的：数学概念产生于历史上某一个时刻，某一位数学大家之
